@@ -5,8 +5,7 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
-*:focus,
-button:focus {
+*:focus {
     outline: none;
 }
 body {
@@ -16,8 +15,11 @@ body {
     color: #949098;
 }
 .search-form {
+	display: -webkit-box;
 	display: flex;
+ 	-webkit-box-pack: center;
  	justify-content: center;
+ 	-webkit-box-align: center;
  	align-items: center;
  	align-content: center;
 	height: 100vh;
@@ -25,10 +27,12 @@ body {
 }
 @media (max-width: 767px) {
 	.search-form {
+		-webkit-box-align: start;
 		align-items: flex-start;
 	}
 }
 .search-form__content {
+	-webkit-box-flex: 0;
 	flex: 0 0 100%;
 	width: 100%;
 	max-width: 800px;
